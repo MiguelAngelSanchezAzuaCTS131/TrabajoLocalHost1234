@@ -14,9 +14,9 @@
     <title>Index</title>
 </head>
 <body>
-    <div class="Contenedor-del-contenedor" style="height: 95vh; width: 186vh;">
+    <div class="Contenedor-del-contenedor" style="height: 95vh; width: 100%;">
 
-        <div class="contener" style="font-family: 'Unbounded', sans-serif; background-color: #846a6a;">
+        <div class="contener" style="font-family: 'Unbounded', sans-serif; background-color: #000000;">
           <a class="navbar-brand" href="" style="color: #eef0f2; font-size: 21px;">Inicio</a>
           <!-- Un boton de inicio que lleva a si mismo, de color blanco, aqui pueden poner el color que quieran dependiendo de su estilo -->
         
@@ -61,7 +61,7 @@
     
         
         <div class="jumbotron" style="text-align: center; background-color: #eef0f2;">
-            <h1 class="display-4" style="color: #a99985; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif;">Cuarto Semestre</h1>
+            <h1 class="display-4" style="color: #000000; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif;">Volleyball</h1>
         </div>
     <?php
     $username = "root";
