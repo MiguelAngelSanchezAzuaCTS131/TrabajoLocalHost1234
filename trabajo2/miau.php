@@ -38,7 +38,7 @@
                     </a>
                     <!-- Lo que sigue son los menus que se van a desplegar hacia abajo, cada uno tendra el nombre de su practica, ejemplo, practica uno se llamara su nombre el numero de la practica ZZ terminando con HTML -->
                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="dropdown-item" href="/Arturo.html">Practica 4</a><br>
+                        <a href="dropdown-item" href="/trabajo2/hola4.php">Practica 4</a><br>
                         <a href="dropdown-item" href="/Arturo1.html">Practica 5</a><br>
                         <a href="dropdown-item" href="/index.html">Practica 6</a><br>
                      </div>
