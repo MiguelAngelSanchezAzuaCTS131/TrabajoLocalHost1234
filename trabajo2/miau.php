@@ -14,9 +14,9 @@
     <title>Index</title>
 </head>
 <body>
-    <div class="Contenedor-del-contenedor" style="height: 95vh; width: 100%;">
+    <div class="Contenedor-del-contenedor" style="height: 95vh; width: 186vh;">
 
-        <div class="contener" style="font-family: 'Unbounded', sans-serif; background-color: #000000;">
+        <div class="contener" style="font-family: 'Unbounded', sans-serif; background-color: #846a6a;">
           <a class="navbar-brand" href="" style="color: #eef0f2; font-size: 21px;">Inicio</a>
           <!-- Un boton de inicio que lleva a si mismo, de color blanco, aqui pueden poner el color que quieran dependiendo de su estilo -->
         
@@ -38,7 +38,7 @@
                     </a>
                     <!-- Lo que sigue son los menus que se van a desplegar hacia abajo, cada uno tendra el nombre de su practica, ejemplo, practica uno se llamara su nombre el numero de la practica ZZ terminando con HTML -->
                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="dropdown-item" href="/trabajo2/hola4.php">Practica 4</a><br>
+                        <a href="dropdown-item" href="/Arturo.html">Practica 4</a><br>
                         <a href="dropdown-item" href="/Arturo1.html">Practica 5</a><br>
                         <a href="dropdown-item" href="/index.html">Practica 6</a><br>
                      </div>
@@ -61,7 +61,7 @@
     
         
         <div class="jumbotron" style="text-align: center; background-color: #eef0f2;">
-            <h1 class="display-4" style="color: #000000; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif;">Volleyball</h1>
+            <h1 class="display-4" style="color: #a99985; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif;">Cuarto Semestre</h1>
         </div>
     <?php
     $username = "root";
