@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas API</title>
+    <style>
+      :root {
+          --primary-color: #734B5E;
+          --secondary-color: #BCBDC0;
+          --terceary-color: #565857;
+          --cuarto-color:#8A8D91 ;
+          --quinto-color:#F5D3C8 ;
+      }
+      *{
+        box-sizing: border-box;
+      }
+      body {
+          margin: 0;
+          background-color: var(--cuarto-color);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      header {
+          padding: 15px;
+          display: flex;
+          justify-content: flex-end;
+          background-color: var(--terceary-color);
+      }
+      .search {
+          background-color: white;
+          border: 5px solid var(--terceary-color);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          border-radius: 50px;
+          font-size: 15px;
+          padding: 10px 16px;
+          color: var(--primary-color);
+      }
+      .search::placeholder {
+          color: var(--terceary-color);
+      }
+      .search:focus {
+          outline: none;
+          background-color: var(--quinto-color);
+      }
+      main {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          
+      }
+      .personaje {
+          position: relative;
+          margin: 15px;
+          background-color: var(--secondary-color);
+          box-shadow: 0 5px 5px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+      }
+      .personaje img {
+          width: 80%px;
+          
+      }
+      .personaje-info {
+          color: var(--terceary-color);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 4px;
+          padding: 8px 15px 15px;
+          letter-spacing: 0;
+      }
+      .personaje-info h3 {
+        color: var(--primary-color);
+          margin-top: 0; 
+      }
+      .personaje-info h1 {
+        color: var(--terciary-color);
+          margin-top: 0; 
+      }
+      .personaje-info span.blue {
+          color: blue;
+      }
+      .personaje-info span.orange {
+          color: orange;
+      }
+      .personaje-info span.red{
+          color: red;
+      }
+      .overview{
+          background-color: #fff;
+          padding: 32px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          max-height: 100%;
+          transform: translateY(101%);
+          overflow-y: auto;
+          transition: transform 0.3s ease-in;
+      }
+      .personaje:hover .overview {
+          transform: translateY(0);
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <form id="form">
+            <img src="logo.jpg" alt="logo" style="width: 100px;">
+            <input type="text" id="search" class="search" placeholder="busca tu pelicula">
+        </form>
+    </header>
+    <main id="main"></main>
+    <script>
+        const API_URL = 'https://dragonball-api.com/api/characters';
+       
+        const main = document.getElementById('main');
+        const form = document.getElementById('form');
+        const search = document.getElementById('search');
+
+        getCharacters(API_URL);
+
+        async function getCharacters(url) {
+            const res = await fetch(url);
+            const data = await res.json();
+            showCharacters(data.items ││ data); 
+        }
+
+        function showCharacters(characters) {
+            main.innerHTML = '';
+
+            characters.forEach((char) => {
+                const { id, name, image, ki, maxKi, race, gender, description } = char;
+                const movieElements = document.createElement('div');
+                charElements.classList.add('personaje');
+                charElements.innerHTML = `
+                    <img src="${image}" alt="${image}"> 
+                    <div class="personaje-info">
+                        <h1>${id}</h1>
+                     <h3>${name}</h3>
+                     <br>
+                     ${race}
+                    </div>
+                    <div class="overview">
+                        <h3>Descripcion</h3>
+                        <p><strong>Ki:</strong> ${ki}</p>
+                        <p>>strong>Max Ki:</strong> ${maxKi}</p>
+                        ${description}
+                    </div>`
+                main.appendChild(charElements);
+            })}
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const searchTerm = search.value.toLowerCase();
+            if (searchTerm && searchTerm !== '') {
+                getMovies(API_URL + `?name=${searchTerm}`)
+                search.value = '';
+            } else {
+                window.location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
