@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API HR</title>
+       <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link href="https://fonts.cdnfonts.com/css/katakana-tfb" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/avestrage" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+      <div class="Contenedor-del-contenedor" style="height: 95vh; width: 100%;">
+
+        <div class="contener" style="font-family: 'katakana tfb', sans-serif; background-color: #0A100D;">
+          <a class="navbar-brand" href="https://miguelangelsanchezazuacts131.github.io/TrabajoLocalHost1234/pf/Index.html" style="color: #eef0f2; font-size: 21px;">Inicio</a>
+          <!-- Un boton de inicio que lleva a si mismo, de color blanco, aqui pueden poner el color que quieran dependiendo de su estilo -->
+        
+          <!-- A continuacion es el menu dropdown para poner las ligas a las practicas -->
+           <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav" style="font-family: 'katakana tfb', sans-serif; background-color: none; font-size: 18px;">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">Unidad 1</a>
+                    <!-- Lo que sigue son los menus que se van a desplegar hacia abajo, cada uno tendra el nombre de su practica, ejemplo, practica uno se llamara su nombre el numero de la practica ZZ terminando con HTML -->
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="https://miguelangelsanchezazuacts131.github.io/TrabajoLocalHost1234/pf/Pokedex/indexpoke.html">Practica 1</a><br>
+                        <a href="https://miguelangelsanchezazuacts131.github.io/TrabajoLocalHost1234/pf/Peliculas/indexp.html">Practica 2</a><br>
+                        <a  href="https://miguelangelsanchezazuacts131.github.io/TrabajoLocalHost1234/pf/db/indexdb.html">Practica 3</a><br>
+                     </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2; font-family: 'katakana tfb', sans-serif;">
+                        Unidad 2
+                    </a>
+                    <!-- Lo que sigue son los menus que se van a desplegar hacia abajo, cada uno tendra el nombre de su practica, ejemplo, practica uno se llamara su nombre el numero de la practica ZZ terminando con HTML -->
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a  href="https://miguelangelsanchezazuacts131.github.io/TrabajoLocalHost1234/pf/RickPotter/indexrh.HTML">Practica 4</a><br>
+                     </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- Lo que sigue son los menus que se van a desplegar hacia abajo, cada uno tendra el nombre de su practica, ejemplo, practica uno se llamara su nombre el numero de la practica ZZ terminando con HTML -->
+                </li>
+            </ul>
+           </div>
+        </div>
+
+
+    <style>
+        :root {
+           
+--color-primario: #2A2B2E;
+--color-secundario: #5A5A66;
+        }   
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: var(--color-primario);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        header {
+            padding: 16px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: var(--color-secundario);
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .personaje {
+            width: 400px;
+            margin: 15px;
+            background-color: var(--color-primario);
+            box-shadow: 10px 15px 1px var(--color-secundario);
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .personaje img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+        .personaje-info {
+            color: var(--color-secundario);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+            padding: 0.8px 15px 15px;
+            letter-spacing: 5px;
+        }
+        .personaje-info h1 {
+            color: var(--color-primario);
+            margin-top: 0;
+        }
+        .personaje-info span {
+            background-color: var(--color-primario);
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .overview {
+            background-color: var(--color-secundario);
+            padding: 32px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            max-height: 100%;
+            transform: translateY(101%);
+            overflow-y: auto;
+            transition: transform 1s ease-in;
+        }
+        .personaje:hover .overview {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+
+   <header>
+        <form id="form">
+            <img src="logo.jpg" alt="logo" style="width: 100px;">
+        </form>
+    </header>
+    <main id="main"></main>
+    <script>
+               const API_HP = 'https://hp-api.onrender.com/api/characters';
+               const API_RICK = 'https://rickandmortyapi.com/api/character';
+
+        
+        
+        const main = document.getElementById('main');
+        const form = document.getElementById('form');
+        const search = document.getElementById('search');
+
+        getAllCharacters();
+
+        async function getAllCharacters() {
+            const [hpRes, rmRes] = await Promise.all([
+              fetch(API_HP).then(res => res.json()),
+              fetch(API_RICK).then(res =>res.json())
+
+            ]);
+            const hpChars = hpRes || [];
+            const rickChars = rmRes.results || [];
+
+
+            showCharacters([...hpChars, ...rickChars]);
+            
+        }
+
+function showCharacters(characters) {
+    main.innerHTML = '';
+    characters.forEach((char) => {
+        let name = char.name || 'Desconocido';
+        let image = char.image  ||  ''; 
+        let species = char.species || '';
+        let gender = char.gender || '';
+        let actor = char.actor || 'Desconocido';
+        let house = char.house || '';
+        let status = char.status || (char.alive === false ? 'Deceased' : 'Alive');
+                
+       const charElement = document.createElement('div');
+        charElement.classList.add('personaje');
+        charElement.innerHTML = `
+            <img src="${image}" alt="${name}">
+
+            <div class="personaje-info">
+                <h1>${name}</h1>
+                <span>${species}</span>
+            </div>
+
+            <div class="overview">
+                <p><strong>Casa:</strong> ${name}</p>
+                <p><strong>Actor:</strong> ${actor}</p>
+                <p><strong>Género:</strong> ${gender}</p>
+                <p><strong>Estado:</strong> ${status}</p>
+            </div>
+
+        `;
+        main.appendChild(charElement);
+    });
+}
+    </script>
+
+
+
+</body>
+</html>
